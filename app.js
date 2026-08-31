@@ -1,5 +1,5 @@
 const state = { currentDate: null, card: null, door: 'suggested' };
-const views = { today: 'todayView', calendar: 'calendarView', alchemy: 'alchemyView', framework: 'frameworkView' };
+const views = { journal: 'journalView', atlas: 'atlasView', alchemy: 'alchemyView', method: 'methodView' };
 
 const fallbackCards = {
   '2026-08-30': {
@@ -63,7 +63,7 @@ function renderDoor(){
 
 async function openDate(iso){
   state.currentDate=iso;state.door='suggested';
-  document.getElementById('todayEyebrow').textContent=iso===localIsoDate()?'TODAY':'PROMPT CARD';
+  document.getElementById('todayEyebrow').textContent=iso===localIsoDate()?'JOURNAL · TODAY':'JOURNAL · PROMPT CARD';
   document.getElementById('todayTitle').textContent=niceDate(iso);
   try{state.card=await loadCard(iso);renderDoor();}
   catch(err){
@@ -71,13 +71,13 @@ async function openDate(iso){
     document.getElementById('promptMeta').innerHTML='';
     document.getElementById('promptQuestion').textContent='No Prompt Card is scheduled for this date.';
   }
-  go('today');window.scrollTo({top:0,behavior:'smooth'});
+  go('journal');window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function go(name){
   Object.entries(views).forEach(([key,id])=>document.getElementById(id).classList.toggle('active',key===name));
   document.querySelectorAll('.nav-button').forEach(btn=>btn.classList.toggle('active',btn.dataset.go===name));
-  if(name!=='today') window.scrollTo({top:0,behavior:'smooth'});
+  if(name!=='journal') window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function buildCalendar(){

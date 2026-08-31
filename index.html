@@ -5,29 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#6f5aa8">
   <meta name="color-scheme" content="light dark">
-  <title>Luminous Veil · Journal Companion</title>
+  <title>Eolas Observatory · Journal · Atlas · Alchemy</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="app-header">
-    <button class="brand-lockup" type="button" data-go="today" aria-label="Go to today">
+    <button class="brand-lockup" type="button" data-go="journal" aria-label="Go to Journal">
       <div class="brand-mark" aria-hidden="true">✦</div>
       <div>
-        <p class="eyebrow">JOURNAL COMPANION</p>
-        <h1>Luminous Veil</h1>
+        <p class="eyebrow">EOLAS OBSERVATORY</p>
+        <h1>Journal · Atlas · Alchemy</h1>
       </div>
     </button>
     <button id="themeButton" class="icon-button" type="button" aria-label="Toggle appearance">☾</button>
   </header>
 
   <main>
-    <section id="todayView" class="view active" aria-labelledby="todayTitle">
+    <section id="journalView" class="view active" aria-labelledby="todayTitle">
       <div class="today-heading">
         <div>
-          <p class="eyebrow" id="todayEyebrow">TODAY</p>
+          <p class="eyebrow" id="todayEyebrow">JOURNAL · TODAY</p>
           <h2 id="todayTitle">Loading today…</h2>
         </div>
-        <button id="dateButton" class="date-chip" type="button" data-go="calendar">Calendar</button>
+        <button id="dateButton" class="date-chip" type="button" data-go="atlas">Atlas</button>
       </div>
 
       <article id="promptCard" class="prompt-card" aria-live="polite">
@@ -58,11 +58,19 @@
       <a class="primary-button" href="https://750words.com/" target="_blank" rel="noopener noreferrer">Open 750 Words <span aria-hidden="true">↗</span></a>
     </section>
 
-    <section id="calendarView" class="view" aria-labelledby="calendarTitle">
+    <section id="atlasView" class="view" aria-labelledby="atlasTitle">
       <div class="page-intro">
-        <p class="eyebrow">PROMPT CALENDAR</p>
-        <h2 id="calendarTitle">September 2026</h2>
-        <p>Choose a day to open its Prompt Card. September is the baseline month, not a syllabus.</p>
+        <p class="eyebrow">ATLAS</p>
+        <h2 id="atlasTitle">Connections, not conclusions</h2>
+        <p>The Atlas is where observations can begin to form terrain. For now, it holds the prompt calendar and the first mapped object. Patterns, monthly synthesis, and Prediction ↔ Reality can appear here later when there is enough evidence to earn them.</p>
+      </div>
+      <section class="card atlas-principle">
+        <p class="section-label">WORKING MAP</p>
+        <h3>Here be possible patterns.</h3>
+        <p class="supporting-copy">A line on the map can remain tentative. Repetition is evidence of recurrence, not an explanation of cause.</p>
+      </section>
+      <div class="section-heading atlas-calendar-heading">
+        <div><p class="section-label">JOURNAL CALENDAR</p><h3>September 2026</h3></div>
       </div>
       <div class="calendar-shell card">
         <div class="calendar-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
@@ -73,6 +81,11 @@
         <span><b>August 31</b><small>Open the bridge prompt before September.</small></span>
         <span>›</span>
       </button>
+      <article class="atlas-object-card">
+        <img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001">
+        <div><p class="section-label">MAPPED OBJECT · AUG 30</p><h3>Curiosity Map 001</h3><p>The first object that naturally belongs to more than one room: preserved in Alchemy, visible here for the network it records.</p></div>
+      </article>
+      <button class="method-link" type="button" data-go="method">Read the Observatory method <span>›</span></button>
     </section>
 
     <section id="alchemyView" class="view" aria-labelledby="alchemyTitle">
@@ -94,11 +107,11 @@
       <div class="empty-note"><span>✧</span><p>This collection is allowed to stay small. New pieces appear only when something earns preservation.</p></div>
     </section>
 
-    <section id="frameworkView" class="view" aria-labelledby="frameworkTitle">
+    <section id="methodView" class="view" aria-labelledby="frameworkTitle">
       <div class="page-intro">
-        <p class="eyebrow">FRAMEWORK</p>
-        <h2 id="frameworkTitle">The map, not the territory</h2>
-        <p>A compact reference for the system underneath the daily experience.</p>
+        <p class="eyebrow">OBSERVATORY METHOD</p>
+        <h2 id="frameworkTitle">How the instruments work</h2>
+        <p>A compact reference for the method underneath Journal, Atlas, and Alchemy.</p>
       </div>
 
       <section class="card movement-card">
@@ -137,10 +150,9 @@
   </main>
 
   <nav class="bottom-nav" aria-label="Primary navigation">
-    <button class="nav-button active" data-go="today" type="button"><span>☀</span><b>Today</b></button>
-    <button class="nav-button" data-go="calendar" type="button"><span>▦</span><b>Calendar</b></button>
+    <button class="nav-button active" data-go="journal" type="button"><span>☀</span><b>Journal</b></button>
+    <button class="nav-button" data-go="atlas" type="button"><span>⌁</span><b>Atlas</b></button>
     <button class="nav-button" data-go="alchemy" type="button"><span>✧</span><b>Alchemy</b></button>
-    <button class="nav-button" data-go="framework" type="button"><span>⌘</span><b>Framework</b></button>
   </nav>
 
   <dialog id="artifactDialog" class="artifact-dialog">

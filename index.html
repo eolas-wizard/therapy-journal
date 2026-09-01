@@ -9,157 +9,73 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="app-header">
-    <button class="brand-lockup" type="button" data-go="journal" aria-label="Go to Journal">
-      <div class="brand-mark" aria-hidden="true">✦</div>
-      <div>
-        <p class="eyebrow">EOLAS OBSERVATORY</p>
-        <h1>Journal · Atlas · Alchemy</h1>
-      </div>
-    </button>
-    <button id="themeButton" class="icon-button" type="button" aria-label="Toggle appearance">☾</button>
-  </header>
-
-  <main>
-    <section id="journalView" class="view active" aria-labelledby="todayTitle">
-      <div class="today-heading">
-        <div>
-          <p class="eyebrow" id="todayEyebrow">JOURNAL · TODAY</p>
-          <h2 id="todayTitle">Loading today…</h2>
-        </div>
-        <button id="dateButton" class="date-chip" type="button" data-go="atlas">Atlas</button>
-      </div>
-
-      <article id="promptCard" class="prompt-card" aria-live="polite">
-        <div class="prompt-meta" id="promptMeta"></div>
-        <p id="promptQuestion" class="prompt-question">Finding your prompt…</p>
-      </article>
-
-      <div id="doorTabs" class="door-tabs" role="tablist" aria-label="Prompt choices">
-        <button class="door-tab active" type="button" data-door="suggested" role="tab" aria-selected="true">Suggested</button>
-        <button class="door-tab" type="button" data-door="gentler" role="tab">🌿 Gentler</button>
-        <button class="door-tab" type="button" data-door="different" role="tab">🔀 Different</button>
-        <button class="door-tab" type="button" data-door="wildcard" role="tab">🎲 Wildcard</button>
-        <button class="door-tab" type="button" data-door="freewrite" role="tab">🪶 Freewrite</button>
-      </div>
-
-      <section class="card breadcrumb-card">
-        <div class="section-heading compact">
-          <div><p class="section-label">OPTIONAL BREADCRUMBS</p><h3>Carry only what matters</h3></div>
-        </div>
-        <div class="breadcrumb-grid">
-          <div><span>🧭</span><b>Therapy Thread</b></div>
-          <div><span>🔁</span><b>Pattern Spotted</b></div>
-          <div><span>🌱</span><b>Keep</b></div>
-        </div>
-        <p class="supporting-copy">An interrupted, unfinished, short, sideways, or completely different entry still counts. If a prompt names a number, stop when the useful material runs out; the number is scaffolding, not a quota.</p>
-      </section>
-
-      <a class="primary-button" href="https://750words.com/" target="_blank" rel="noopener noreferrer">Open 750 Words <span aria-hidden="true">↗</span></a>
-    </section>
-
-    <section id="atlasView" class="view" aria-labelledby="atlasTitle">
-      <div class="page-intro">
-        <p class="eyebrow">ATLAS</p>
-        <h2 id="atlasTitle">Connections, not conclusions</h2>
-        <p>The Atlas is where observations can begin to form terrain. For now, it holds the prompt calendar and the first mapped object. Patterns, monthly synthesis, and Prediction ↔ Reality can appear here later when there is enough evidence to earn them.</p>
-      </div>
-      <section class="card atlas-principle">
-        <p class="section-label">WORKING MAP</p>
-        <h3>Here be possible patterns.</h3>
-        <p class="supporting-copy">A line on the map can remain tentative. Repetition is evidence of recurrence, not an explanation of cause.</p>
-      </section>
-      <div class="section-heading atlas-calendar-heading">
-        <div><p class="section-label">JOURNAL CALENDAR</p><h3>September 2026</h3></div>
-      </div>
-      <div class="calendar-shell card">
-        <div class="calendar-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
-        <div id="calendarGrid" class="calendar-grid"></div>
-      </div>
-      <button id="august31Button" class="archive-card" type="button">
-        <span class="archive-icon">◌</span>
-        <span><b>August 31</b><small>Open the bridge prompt before September.</small></span>
-        <span>›</span>
-      </button>
-      <article class="atlas-object-card">
-        <img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001">
-        <div><p class="section-label">MAPPED OBJECT · AUG 30</p><h3>Curiosity Map 001</h3><p>The first object that naturally belongs to more than one room: preserved in Alchemy, visible here for the network it records.</p></div>
-      </article>
-      <button class="method-link" type="button" data-go="method">Read the Observatory method <span>›</span></button>
-    </section>
-
-    <section id="alchemyView" class="view" aria-labelledby="alchemyTitle">
-      <div class="page-intro">
-        <p class="eyebrow">ALCHEMY</p>
-        <h2 id="alchemyTitle">The cabinet</h2>
-        <p>Chosen artifacts live here. They do not need to match. They only need to belong.</p>
-      </div>
-      <article class="artifact-card">
-        <button id="artifactImageButton" class="artifact-image-button" type="button" aria-label="Open Curiosity Map 001">
-          <img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001, a hand-drawn associative map of interests from August 30, 2026">
-        </button>
-        <div class="artifact-copy">
-          <p class="section-label">ALCHEMY FRAGMENT · AUG 30, 2026</p>
-          <h3>Curiosity Map 001</h3>
-          <p>Associative movement preserved as a map, without requiring the connections to become an explanation.</p>
-        </div>
-      </article>
-      <div class="empty-note"><span>✧</span><p>This collection is allowed to stay small. New pieces appear only when something earns preservation.</p></div>
-    </section>
-
-    <section id="methodView" class="view" aria-labelledby="frameworkTitle">
-      <div class="page-intro">
-        <p class="eyebrow">OBSERVATORY METHOD</p>
-        <h2 id="frameworkTitle">How the instruments work</h2>
-        <p>A compact reference for the method underneath Journal, Atlas, and Alchemy.</p>
-      </div>
-
-      <section class="card movement-card">
-        <p class="section-label">FOUR MOVEMENTS</p>
-        <div class="movement-flow">
-          <div><span>01</span><b>Present</b><small>What is happening now?</small></div>
-          <div><span>02</span><b>Patterns</b><small>What repeats?</small></div>
-          <div><span>03</span><b>Origins</b><small>Where might it come from?</small></div>
-          <div><span>04</span><b>Integration</b><small>What do I do with what I know?</small></div>
-        </div>
-      </section>
-
-      <section class="card rhythm-card">
-        <p class="section-label">DAILY RHYTHM</p>
-        <div class="rhythm-line"><span>☀️</span><div><b>Open</b><small>750 Words</small></div></div>
-        <div class="rhythm-line"><span>🌎</span><div><b>Experience</b><small>Life</small></div></div>
-        <div class="rhythm-line"><span>🛋️</span><div><b>Process</b><small>Therapy, when applicable</small></div></div>
-        <div class="rhythm-line"><span>🌙</span><div><b>Close</b><small>Pixa</small></div></div>
-      </section>
-
-      <section class="principles-grid">
-        <article><span>◈</span><b>Curiosity over interrogation</b><small>Notice before explaining.</small></article>
-        <article><span>⌁</span><b>Structure without rigidity</b><small>The prompt is a doorway, not an assignment.</small></article>
-        <article><span>✦</span><b>Observe before optimizing</b><small>Signals first. Systems later.</small></article>
-        <article><span>◇</span><b>Memory is not an assignment</b><small>Incomplete still counts.</small></article>
-        <article><span>≋</span><b>Scaffolding, not quotas</b><small>If the useful material runs out, stop. The number was structure, not a requirement.</small></article>
-      </section>
-
-      <section class="card alchemy-rule-card">
-        <p class="section-label">ALCHEMY</p>
-        <h3>Fidelity over consistency</h3>
-        <p>Findings → Natural Motif → Form → Aesthetic → Create → React → Revise / Keep / Discard.</p>
-        <p class="supporting-copy">The collection can look like twelve different rooms in the same strange museum.</p>
-      </section>
-    </section>
-  </main>
-
-  <nav class="bottom-nav" aria-label="Primary navigation">
-    <button class="nav-button active" data-go="journal" type="button"><span>☀</span><b>Journal</b></button>
+  <aside class="desktop-rail" aria-label="Primary navigation">
+    <div class="rail-mark">✣</div>
+    <button class="nav-button active" data-go="journal" type="button"><span>▣</span><b>Journal</b></button>
     <button class="nav-button" data-go="atlas" type="button"><span>⌁</span><b>Atlas</b></button>
-    <button class="nav-button" data-go="alchemy" type="button"><span>✧</span><b>Alchemy</b></button>
-  </nav>
+    <button class="nav-button" data-go="alchemy" type="button"><span>◇</span><b>Alchemy</b></button>
+    <button class="nav-button" data-go="method" type="button"><span>◩</span><b>Method</b></button>
+  </aside>
 
-  <dialog id="artifactDialog" class="artifact-dialog">
-    <button id="closeArtifact" class="dialog-close" type="button" aria-label="Close image">×</button>
-    <img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001 enlarged">
-  </dialog>
+  <div class="app-shell">
+    <header class="app-header">
+      <button class="brand-lockup" type="button" data-go="journal" aria-label="Go to Journal">
+        <span class="brand-mark" aria-hidden="true">✣</span>
+        <span><b>EOLAS OBSERVATORY</b><small>a personal observatory</small></span>
+      </button>
+      <nav class="desktop-links" aria-label="Observatory instruments">
+        <button data-go="journal">Journal</button><button data-go="atlas">Atlas</button><button data-go="alchemy">Alchemy</button><button data-go="method">Method</button>
+      </nav>
+      <div class="header-actions">
+        <button id="themeButton" class="icon-button" type="button" aria-label="Change appearance">◐</button>
+        <button id="calendarButton" class="today-chip" type="button" aria-label="Open prompt calendar"><span>▦</span><b>Today</b></button>
+      </div>
+    </header>
 
+    <main>
+      <section id="journalView" class="view active" aria-labelledby="todayTitle">
+        <div class="journal-layout">
+          <div class="journal-primary">
+            <div class="today-heading"><p class="eyebrow" id="todayEyebrow">JOURNAL · TODAY</p><h1 id="todayTitle">Loading today…</h1></div>
+            <article class="prompt-field" aria-live="polite">
+              <div class="prompt-meta" id="promptMeta"></div>
+              <p id="promptQuestion" class="prompt-question">Finding your prompt…</p>
+              <div id="doorTabs" class="door-fan" role="tablist" aria-label="Prompt choices">
+                <button class="door-tab" type="button" data-door="gentler" role="tab"><span>♧</span><b>Gentler</b></button>
+                <button class="door-tab" type="button" data-door="different" role="tab"><span>⇄</span><b>Different</b></button>
+                <button class="door-tab active" type="button" data-door="suggested" role="tab" aria-selected="true"><span>✣</span><b>Suggested</b></button>
+                <button class="door-tab" type="button" data-door="wildcard" role="tab"><span>◈</span><b>Wildcard</b></button>
+                <button class="door-tab" type="button" data-door="freewrite" role="tab"><span>⌁</span><b>Freewrite</b></button>
+              </div>
+              <p class="door-note">Choose the door that fits.</p>
+            </article>
+            <p class="scaffold-note"><i>An interrupted, unfinished, short, sideways, or completely different entry still counts. If a prompt names a number, stop when the useful material runs out. The number is scaffolding, not a quota.</i></p>
+            <section class="tool-actions" aria-label="Reflection tools">
+              <div class="tool-row"><a class="tool-id" href="https://750words.com/" target="_blank" rel="noopener noreferrer">EOLAS-750</a><a class="tool-button" href="https://750words.com/" target="_blank" rel="noopener noreferrer">Write in 750 Words ↗</a><label><input id="journalDone" type="checkbox"> Journaled</label></div>
+              <div class="tool-row"><a class="tool-id pixa-id" href="https://www.pixaapp.com/" target="_blank" rel="noopener noreferrer">PIXA</a><a class="tool-button secondary" href="https://www.pixaapp.com/" target="_blank" rel="noopener noreferrer">Open Pixa ↗</a><label><input id="pixaDone" type="checkbox"> Tracked</label></div>
+            </section>
+          </div>
+
+          <aside class="journal-context">
+            <section class="context-card signals-card"><p class="section-label">AT A GLANCE</p><h2>Optional signals</h2><div class="signal-list"><div><span>🧭</span><b>Therapy Thread</b><small>Potentially worth bringing to therapy.</small></div><div><span>↻</span><b>Pattern Spotted</b><small>Something familiar or recurring.</small></div><div><span>🌱</span><b>Keep</b><small>Something I want more of.</small></div></div></section>
+            <section class="context-card rhythm-card"><p class="section-label">TODAY'S RHYTHM</p><h2>A map, not a pipeline</h2><div class="rhythm-map" aria-label="Journal, life, therapy and Pixa form a flexible map rather than stages"><span class="path solid p1"></span><span class="path dotted p2"></span><span class="path solid p3"></span><span class="path dotted p4"></span><div class="node journal-node"><b>Journal</b><small>start here</small></div><div class="node life-node"><b>Life</b><small>notice</small></div><div class="node therapy-node"><b>Therapy</b><small>when useful</small></div><div class="node pixa-node"><b>Pixa</b><small>track</small></div></div><p class="supporting-copy">Paths can be direct, optional, repeated, or skipped. The map changes with the day.</p></section>
+          </aside>
+        </div>
+      </section>
+
+      <section id="atlasView" class="view" aria-labelledby="atlasTitle"><div class="page-intro"><p class="eyebrow">ATLAS</p><h1 id="atlasTitle">Connections, not conclusions</h1><p>Observations can begin to form terrain here. A line on the map may remain tentative; recurrence is evidence, not cause.</p></div><article class="atlas-object-card"><img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001"><div><p class="section-label">MAPPED OBJECT · AUG 30</p><h2>Curiosity Map 001</h2><p>The first preserved object that naturally belongs to more than one instrument.</p></div></article><button class="method-link" data-go="method" type="button">Observatory method <span>›</span></button></section>
+
+      <section id="alchemyView" class="view" aria-labelledby="alchemyTitle"><div class="page-intro"><p class="eyebrow">ALCHEMY</p><h1 id="alchemyTitle">The cabinet</h1><p>Artifacts are private by default. Pieces appear here only when explicitly chosen for public display.</p></div><article class="artifact-card"><button id="artifactImageButton" class="artifact-image-button" type="button" aria-label="Open and zoom Curiosity Map 001"><img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001"></button><div class="artifact-copy"><p class="section-label">ALCHEMY FRAGMENT · AUG 30, 2026</p><h2>Curiosity Map 001</h2><p>Created from an associative chain that emerged during journaling. Source journal material remains private.</p></div></article></section>
+
+      <section id="methodView" class="view" aria-labelledby="methodTitle"><div class="page-intro"><p class="eyebrow">OBSERVATORY METHOD</p><h1 id="methodTitle">Three instruments. Four movements.</h1><p>Journal is where experience enters. Atlas makes relationships visible. Alchemy preserves selected transformations.</p></div><section class="method-strip"><div><b>Present</b><small>What is happening now?</small></div><div><b>Patterns</b><small>What repeats?</small></div><div><b>Origins</b><small>Where might this connect?</small></div><div><b>Integration</b><small>What do I do with what I know?</small></div></section><p class="method-caveat">These are movements, not stages. You can enter, leave, repeat, or skip them.</p><section class="principles"><p><b>Curiosity over interrogation.</b> Notice before explaining.</p><p><b>Structure without rigidity.</b> A prompt is a doorway, not an assignment.</p><p><b>Observe before optimizing.</b> Signals first. Systems later.</p><p><b>Memory is not an assignment.</b> Incomplete still counts.</p><p><b>Scaffolding, not quotas.</b> Stop when the useful material runs out.</p></section><section class="alchemy-note"><p class="section-label">ALCHEMY</p><h2>Form follows the material.</h2><p>Artifacts do not need to match. Preservation is intentional, and public display is a separate choice.</p></section></section>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Primary navigation"><button class="nav-button active" data-go="journal" type="button"><span>▣</span><b>Journal</b></button><button class="nav-button" data-go="atlas" type="button"><span>⌁</span><b>Atlas</b></button><button class="nav-button" data-go="alchemy" type="button"><span>◇</span><b>Alchemy</b></button><button class="nav-button" data-go="method" type="button"><span>◩</span><b>Method</b></button></nav>
+
+  <dialog id="calendarDialog" class="calendar-dialog"><div class="dialog-head"><div><p class="section-label">PROMPT CALENDAR</p><h2>September 2026</h2></div><button class="dialog-close" data-close-calendar aria-label="Close calendar">×</button></div><div class="calendar-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div id="calendarGrid" class="calendar-grid"></div><button id="august31Button" class="bridge-button" type="button">← August 31 bridge prompt</button></dialog>
+
+  <dialog id="artifactDialog" class="artifact-dialog"><div class="zoom-toolbar"><button id="zoomOut" type="button" aria-label="Zoom out">−</button><button id="zoomReset" type="button">Reset</button><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="closeArtifact" type="button" aria-label="Close image">×</button></div><div class="zoom-stage"><img id="zoomImage" src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001 enlarged"></div></dialog>
   <script src="app.js"></script>
 </body>
 </html>

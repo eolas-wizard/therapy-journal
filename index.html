@@ -35,15 +35,14 @@
       <article class="prompt-card" aria-live="polite">
         <div class="prompt-meta" id="promptMeta"></div>
         <p id="promptQuestion" class="prompt-question">What parts of an ordinary day make life feel more like mine, even when nothing especially important is happening?</p>
-        <button id="markPromptButton" class="mark-prompt" type="button" aria-pressed="false">Mark this as the prompt I used</button>
       </article>
 
       <div id="doorTabs" class="door-grid" role="tablist" aria-label="Prompt choices">
-        <button class="door-tab active" data-door="suggested" type="button" role="tab" aria-selected="true"><span>Suggested</span><small>today's card</small></button>
-        <button class="door-tab" data-door="gentler" type="button" role="tab"><span>🌿 Gentler</span><small>less demanding</small></button>
-        <button class="door-tab" data-door="different" type="button" role="tab"><span>↗ Different</span><small>change direction</small></button>
-        <button class="door-tab" data-door="wildcard" type="button" role="tab"><span>✦ Wildcard</span><small>stranger door</small></button>
-        <button class="door-tab" data-door="freewrite" type="button" role="tab"><span>✎ Freewrite</span><small>follow attention</small></button>
+        <div class="door-option"><button class="door-tab active" data-door="suggested" type="button" role="tab" aria-selected="true"><span>Suggested</span><small>today's card</small></button><button class="door-check" data-mark-door="suggested" type="button" aria-label="Mark Suggested as the prompt used" aria-pressed="false"></button></div>
+        <div class="door-option"><button class="door-tab" data-door="gentler" type="button" role="tab"><span>🌿 Gentler</span><small>less demanding</small></button><button class="door-check" data-mark-door="gentler" type="button" aria-label="Mark Gentler as the prompt used" aria-pressed="false"></button></div>
+        <div class="door-option"><button class="door-tab" data-door="different" type="button" role="tab"><span>↗ Different</span><small>change direction</small></button><button class="door-check" data-mark-door="different" type="button" aria-label="Mark Different Direction as the prompt used" aria-pressed="false"></button></div>
+        <div class="door-option"><button class="door-tab" data-door="wildcard" type="button" role="tab"><span>✦ Wildcard</span><small>stranger door</small></button><button class="door-check" data-mark-door="wildcard" type="button" aria-label="Mark Wildcard as the prompt used" aria-pressed="false"></button></div>
+        <div class="door-option"><button class="door-tab" data-door="freewrite" type="button" role="tab"><span>✎ Freewrite</span><small>follow attention</small></button><button class="door-check" data-mark-door="freewrite" type="button" aria-label="Mark Freewrite as the prompt used" aria-pressed="false"></button></div>
       </div>
 
       <section class="signals" aria-label="Optional signals">

@@ -3,29 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#6f5aa8">
+  <meta name="theme-color" content="#76629a">
   <meta name="color-scheme" content="light dark">
   <title>Eolas Observatory · Journal · Atlas · Alchemy</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <aside class="desktop-rail" aria-label="Primary navigation">
-    <div class="rail-mark">✣</div>
-    <button class="nav-button active" data-go="journal" type="button"><span>▣</span><b>Journal</b></button>
+    <div class="rail-mark" aria-hidden="true">◌</div>
+    <button class="nav-button active" data-go="journal" type="button"><span>│</span><b>Journal</b></button>
     <button class="nav-button" data-go="atlas" type="button"><span>⌁</span><b>Atlas</b></button>
     <button class="nav-button" data-go="alchemy" type="button"><span>◇</span><b>Alchemy</b></button>
-    <button class="nav-button" data-go="method" type="button"><span>◩</span><b>Method</b></button>
+    <button class="nav-button" data-go="method" type="button"><span>···</span><b>Method</b></button>
   </aside>
 
   <div class="app-shell">
     <header class="app-header">
       <button class="brand-lockup" type="button" data-go="journal" aria-label="Go to Journal">
-        <span class="brand-mark" aria-hidden="true">✣</span>
-        <span><b>EOLAS OBSERVATORY</b><small>a personal observatory</small></span>
+        <span class="brand-mark" aria-hidden="true">◌</span>
+        <span><b>EOLAS OBSERVATORY</b><small>Journal · Atlas · Alchemy</small></span>
       </button>
-      <nav class="desktop-links" aria-label="Observatory instruments">
-        <button data-go="journal">Journal</button><button data-go="atlas">Atlas</button><button data-go="alchemy">Alchemy</button><button data-go="method">Method</button>
-      </nav>
       <div class="header-actions">
         <button id="themeButton" class="icon-button" type="button" aria-label="Change appearance">◐</button>
         <button id="calendarButton" class="today-chip" type="button" aria-label="Open prompt calendar"><span>▦</span><b>Today</b></button>
@@ -34,47 +31,62 @@
 
     <main>
       <section id="journalView" class="view active" aria-labelledby="todayTitle">
-        <div class="journal-layout">
-          <div class="journal-primary">
-            <div class="today-heading"><p class="eyebrow" id="todayEyebrow">JOURNAL · TODAY</p><h1 id="todayTitle">Loading today…</h1></div>
-            <article class="prompt-field" aria-live="polite">
-              <div class="prompt-meta" id="promptMeta"></div>
-              <p id="promptQuestion" class="prompt-question">Finding your prompt…</p>
-              <div id="doorTabs" class="door-fan" role="tablist" aria-label="Prompt choices">
-                <button class="door-tab" type="button" data-door="gentler" role="tab"><span>♧</span><b>Gentler</b></button>
-                <button class="door-tab" type="button" data-door="different" role="tab"><span>⇄</span><b>Different</b></button>
-                <button class="door-tab active" type="button" data-door="suggested" role="tab" aria-selected="true"><span>✣</span><b>Suggested</b></button>
-                <button class="door-tab" type="button" data-door="wildcard" role="tab"><span>◈</span><b>Wildcard</b></button>
-                <button class="door-tab" type="button" data-door="freewrite" role="tab"><span>⌁</span><b>Freewrite</b></button>
-              </div>
-              <p class="door-note">Choose the door that fits.</p>
-            </article>
-            <p class="scaffold-note"><i>An interrupted, unfinished, short, sideways, or completely different entry still counts. If a prompt names a number, stop when the useful material runs out. The number is scaffolding, not a quota.</i></p>
-            <section class="tool-actions" aria-label="Reflection tools">
-              <div class="tool-row"><a class="tool-id" href="https://750words.com/" target="_blank" rel="noopener noreferrer">EOLAS-750</a><a class="tool-button" href="https://750words.com/" target="_blank" rel="noopener noreferrer">Write in 750 Words ↗</a><label><input id="journalDone" type="checkbox"> Journaled</label></div>
-              <div class="tool-row"><a class="tool-id pixa-id" href="https://www.pixaapp.com/" target="_blank" rel="noopener noreferrer">PIXA</a><a class="tool-button secondary" href="https://www.pixaapp.com/" target="_blank" rel="noopener noreferrer">Open Pixa ↗</a><label><input id="pixaDone" type="checkbox"> Tracked</label></div>
-            </section>
-          </div>
+        <div class="today-heading"><p class="eyebrow" id="todayEyebrow">JOURNAL · TODAY</p><h1 id="todayTitle">September 1</h1></div>
 
-          <aside class="journal-context">
-            <section class="context-card signals-card"><p class="section-label">AT A GLANCE</p><h2>Optional signals</h2><div class="signal-list"><div><span>🧭</span><b>Therapy Thread</b><small>Potentially worth bringing to therapy.</small></div><div><span>↻</span><b>Pattern Spotted</b><small>Something familiar or recurring.</small></div><div><span>🌱</span><b>Keep</b><small>Something I want more of.</small></div></div></section>
-            <section class="context-card rhythm-card"><p class="section-label">TODAY'S RHYTHM</p><h2>A map, not a pipeline</h2><div class="rhythm-map" aria-label="Journal, life, therapy and Pixa form a flexible map rather than stages"><span class="path solid p1"></span><span class="path dotted p2"></span><span class="path solid p3"></span><span class="path dotted p4"></span><div class="node journal-node"><b>Journal</b><small>start here</small></div><div class="node life-node"><b>Life</b><small>notice</small></div><div class="node therapy-node"><b>Therapy</b><small>when useful</small></div><div class="node pixa-node"><b>Pixa</b><small>track</small></div></div><p class="supporting-copy">Paths can be direct, optional, repeated, or skipped. The map changes with the day.</p></section>
-          </aside>
+        <article class="prompt-field" aria-live="polite">
+          <div class="prompt-meta" id="promptMeta"></div>
+          <p id="promptQuestion" class="prompt-question">What parts of an ordinary day make life feel more like mine, even when nothing especially important is happening?</p>
+        </article>
+
+        <div id="doorTabs" class="door-grid" role="tablist" aria-label="Prompt choices">
+          <button class="door-tab active" type="button" data-door="suggested" role="tab" aria-selected="true"><span>◉</span><b>Suggested</b></button>
+          <button class="door-tab" type="button" data-door="gentler" role="tab"><span>♧</span><b>Gentler</b></button>
+          <button class="door-tab" type="button" data-door="different" role="tab"><span>↝</span><b>Different</b></button>
+          <button class="door-tab" type="button" data-door="wildcard" role="tab"><span>✣</span><b>Wildcard</b></button>
+          <button class="door-tab" type="button" data-door="freewrite" role="tab"><span>⌁</span><b>Freewrite</b></button>
         </div>
+
+        <section class="signals-line" aria-label="Optional signals">
+          <span class="section-label">OPTIONAL SIGNALS</span>
+          <span>🧭 Therapy Thread</span><span>↻ Pattern Spotted</span><span>🌱 Keep</span>
+        </section>
+
+        <p class="scaffold-note"><i>An interrupted, unfinished, short, sideways, or completely different entry still counts. If a prompt names a number, stop when the useful material runs out. The number is scaffolding, not a quota.</i></p>
+
+        <section class="tool-actions" aria-label="Reflection tools">
+          <div class="tool-row"><a href="https://750words.com/" target="_blank" rel="noopener noreferrer"><span class="tool-id">750</span><b>Write in 750 Words</b><span>↗</span></a><label><input id="journalDone" type="checkbox"> Done</label></div>
+          <div class="tool-row"><a href="https://www.pixaapp.com/" target="_blank" rel="noopener noreferrer"><span class="tool-id pixa-id">PX</span><b>Open Pixa</b><span>↗</span></a><label><input id="pixaDone" type="checkbox"> Done</label></div>
+        </section>
       </section>
 
-      <section id="atlasView" class="view" aria-labelledby="atlasTitle"><div class="page-intro"><p class="eyebrow">ATLAS</p><h1 id="atlasTitle">Connections, not conclusions</h1><p>Observations can begin to form terrain here. A line on the map may remain tentative; recurrence is evidence, not cause.</p></div><article class="atlas-object-card"><img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001"><div><p class="section-label">MAPPED OBJECT · AUG 30</p><h2>Curiosity Map 001</h2><p>The first preserved object that naturally belongs to more than one instrument.</p></div></article><button class="method-link" data-go="method" type="button">Observatory method <span>›</span></button></section>
+      <section id="atlasView" class="view" aria-labelledby="atlasTitle">
+        <div class="page-intro"><p class="eyebrow">ATLAS</p><h1 id="atlasTitle">Connections, not conclusions</h1><p>Observations can begin to form terrain here. A line on the map may remain tentative; recurrence is evidence, not cause.</p></div>
+        <article class="atlas-object-card"><img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001"><div><p class="section-label">MAPPED OBJECT · AUG 30</p><h2>Curiosity Map 001</h2><p>The first preserved object that naturally belongs to more than one instrument.</p></div></article>
+        <button class="method-link" data-go="method" type="button">Observatory method <span>›</span></button>
+      </section>
 
-      <section id="alchemyView" class="view" aria-labelledby="alchemyTitle"><div class="page-intro"><p class="eyebrow">ALCHEMY</p><h1 id="alchemyTitle">The cabinet</h1><p>Artifacts are private by default. Pieces appear here only when explicitly chosen for public display.</p></div><article class="artifact-card"><button id="artifactImageButton" class="artifact-image-button" type="button" aria-label="Open and zoom Curiosity Map 001"><img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001"></button><div class="artifact-copy"><p class="section-label">ALCHEMY FRAGMENT · AUG 30, 2026</p><h2>Curiosity Map 001</h2><p>Created from an associative chain that emerged during journaling. Source journal material remains private.</p></div></article></section>
+      <section id="alchemyView" class="view" aria-labelledby="alchemyTitle">
+        <div class="page-intro"><p class="eyebrow">ALCHEMY</p><h1 id="alchemyTitle">The cabinet</h1><p>Artifacts are private by default. Pieces appear here only when explicitly chosen for public display.</p></div>
+        <article class="artifact-card"><button id="artifactImageButton" class="artifact-image-button" type="button" aria-label="Open and zoom Curiosity Map 001"><img src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001"></button><div class="artifact-copy"><p class="section-label">ALCHEMY FRAGMENT · AUG 30, 2026</p><h2>Curiosity Map 001</h2><p>Created from an associative chain that emerged during journaling. Source journal material remains private.</p></div></article>
+      </section>
 
-      <section id="methodView" class="view" aria-labelledby="methodTitle"><div class="page-intro"><p class="eyebrow">OBSERVATORY METHOD</p><h1 id="methodTitle">Three instruments. Four movements.</h1><p>Journal is where experience enters. Atlas makes relationships visible. Alchemy preserves selected transformations.</p></div><section class="method-strip"><div><b>Present</b><small>What is happening now?</small></div><div><b>Patterns</b><small>What repeats?</small></div><div><b>Origins</b><small>Where might this connect?</small></div><div><b>Integration</b><small>What do I do with what I know?</small></div></section><p class="method-caveat">These are movements, not stages. You can enter, leave, repeat, or skip them.</p><section class="principles"><p><b>Curiosity over interrogation.</b> Notice before explaining.</p><p><b>Structure without rigidity.</b> A prompt is a doorway, not an assignment.</p><p><b>Observe before optimizing.</b> Signals first. Systems later.</p><p><b>Memory is not an assignment.</b> Incomplete still counts.</p><p><b>Scaffolding, not quotas.</b> Stop when the useful material runs out.</p></section><section class="alchemy-note"><p class="section-label">ALCHEMY</p><h2>Form follows the material.</h2><p>Artifacts do not need to match. Preservation is intentional, and public display is a separate choice.</p></section></section>
+      <section id="methodView" class="view" aria-labelledby="methodTitle">
+        <div class="page-intro"><p class="eyebrow">OBSERVATORY METHOD</p><h1 id="methodTitle">Three instruments. Four movements.</h1><p>Journal is where experience enters. Atlas makes relationships visible. Alchemy preserves selected transformations.</p></div>
+        <section class="movement-map" aria-label="The four movements are connected but are not sequential stages">
+          <svg viewBox="0 0 640 260" role="img" aria-label="A flexible map connecting Present, Patterns, Origins and Integration with solid and dotted paths">
+            <path class="map-solid" d="M130 78 C220 25 325 42 390 104"/><path class="map-dotted" d="M390 104 C480 80 545 118 520 190"/><path class="map-solid" d="M520 190 C390 240 270 226 202 182"/><path class="map-dotted" d="M202 182 C130 160 95 125 130 78"/><path class="map-dotted" d="M202 182 C285 120 320 118 390 104"/>
+          </svg>
+          <div class="movement-node n1"><b>Present</b><small>what is happening now?</small></div><div class="movement-node n2"><b>Patterns</b><small>what repeats?</small></div><div class="movement-node n3"><b>Origins</b><small>where might this connect?</small></div><div class="movement-node n4"><b>Integration</b><small>what do I do with what I know?</small></div>
+        </section>
+        <p class="method-caveat">Solid and dotted paths are possibilities, not stages. Enter, leave, repeat, or skip.</p>
+        <section class="principles"><p><b>Curiosity over interrogation.</b> Notice before explaining.</p><p><b>Structure without rigidity.</b> A prompt is a doorway, not an assignment.</p><p><b>Observe before optimizing.</b> Signals first. Systems later.</p><p><b>Memory is not an assignment.</b> Incomplete still counts.</p><p><b>Scaffolding, not quotas.</b> Stop when the useful material runs out.</p></section>
+      </section>
     </main>
   </div>
 
-  <nav class="bottom-nav" aria-label="Primary navigation"><button class="nav-button active" data-go="journal" type="button"><span>▣</span><b>Journal</b></button><button class="nav-button" data-go="atlas" type="button"><span>⌁</span><b>Atlas</b></button><button class="nav-button" data-go="alchemy" type="button"><span>◇</span><b>Alchemy</b></button><button class="nav-button" data-go="method" type="button"><span>◩</span><b>Method</b></button></nav>
+  <nav class="bottom-nav" aria-label="Primary navigation"><button class="nav-button active" data-go="journal" type="button"><span>│</span><b>Journal</b></button><button class="nav-button" data-go="atlas" type="button"><span>⌁</span><b>Atlas</b></button><button class="nav-button" data-go="alchemy" type="button"><span>◇</span><b>Alchemy</b></button><button class="nav-button" data-go="method" type="button"><span>···</span><b>Method</b></button></nav>
 
   <dialog id="calendarDialog" class="calendar-dialog"><div class="dialog-head"><div><p class="section-label">PROMPT CALENDAR</p><h2>September 2026</h2></div><button class="dialog-close" data-close-calendar aria-label="Close calendar">×</button></div><div class="calendar-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div id="calendarGrid" class="calendar-grid"></div><button id="august31Button" class="bridge-button" type="button">← August 31 bridge prompt</button></dialog>
-
   <dialog id="artifactDialog" class="artifact-dialog"><div class="zoom-toolbar"><button id="zoomOut" type="button" aria-label="Zoom out">−</button><button id="zoomReset" type="button">Reset</button><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="closeArtifact" type="button" aria-label="Close image">×</button></div><div class="zoom-stage"><img id="zoomImage" src="assets/alchemy/2026-08-30-curiosity-map-001.png" alt="Curiosity Map 001 enlarged"></div></dialog>
   <script src="app.js"></script>
 </body>
